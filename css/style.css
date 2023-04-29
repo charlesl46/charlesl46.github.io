@@ -9,3 +9,8 @@ a>code{
         font-size:large;
         color:cornflowerblue;
 }
+
+.nav_unactive:hover{
+    color: goldenrod;
+    font-weight: bold;
+}
