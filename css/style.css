@@ -10,6 +10,13 @@ a>code{
         color:cornflowerblue;
 }
 
+.jlib{
+    font-family: monospace;
+    font-size:large;
+    color:darkred;
+}
+
+
 .nav_unactive:hover{
     color: goldenrod;
     font-weight: bold;
