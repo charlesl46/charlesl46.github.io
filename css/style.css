@@ -12,6 +12,70 @@
     font-family: "Space";
 }
 
+.language {
+    cursor: pointer;
+    font-style: italic;
+    font-size: 18px;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.language::before,
+.language::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.language::before {
+    content: '';
+    /* show by default */
+}
+
+.language--metis::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.language--metis:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+.link-name{
+    font-size: large;
+    font-family: "Space";
+    color: grey;
+    position: relative;
+    text-decoration: none;
+}
+
+.link-name::before {
+    background: gold;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+  }
+  
+.link-name:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+.link-name:hover{
+    color: cornflowerblue;
+}
 
 a>code{
     font-family: monospace;
