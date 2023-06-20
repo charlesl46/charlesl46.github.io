@@ -21,64 +21,42 @@
       </div>
       <br/>
       <div class = "container-lg resume">
-      <h1 style="font-family: Space-bold;">Welcome !</h1>
-      <p>I'm 21 years old, currently studying CS in 3rd year at <a class = "language language--metis" href = "https://www.insa-rouen.fr/formation/specialites-ingenieurses/informatique-et-technologie-de-linformation"> INSA Rouen Normandie</a>, in North - Western France.</p>
-      <h3>Activity</h3>
+      <h1 class="welcome" style="font-family: Space-bold;">Welcome !</h1>
+      <p>I'm 21 years old, currently studying CS in <span style="font-family: Space-bold;">3rd year</span> at <a class = "language language--metis" href = "https://www.insa-rouen.fr/formation/specialites-ingenieurses/informatique-et-technologie-de-linformation"> INSA Rouen Normandie</a>, in North - Western France.</p>
+      <h3 class="activity">Activity</h3>
       <p>I'm now working on several languages and frameworks :</p>
-      <!--PyWikipediaToLaTeX-->
-      <div class="accordion">
+      
 
-
-        <!--python-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              <h5 class="language language--metis" style = 'color: goldenrod;'>Python 3.10</h5>
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              My favourite language. I use it nearly everyday in large <a href = "./projects.html">projects</a> as well as in small utility scripts.
-              <br/>
-              Here are some of my favourite python libs :
-              <ul class="list-group">
-                <li class="list-group-item"><a href = "https://docs.python.org/fr/3/library/os.html" ><code>os</code></a> embedded library, for automation projects, like folder cleaning and sorting.</li>
-                <li class="list-group-item"><a href = "https://pypi.org/project/requests/"><code>requests</code></a> library, for API projects and retrieving images.</li>
-                <li class="list-group-item"><a href = "https://pypi.org/project/wikipedia/"><code>wikipedia-api</code></a> library, for wikipedia projects, like little quiz games or <a href = "https://github.com/charlesl46/Wikipedia2LaTeX">PyWikipedia2LaTeX</a></li>
-                <li class="list-group-item"><a href = "https://pypi.org/project/tmdbv3api/"><code>tmdbv3api</code></a> library, for films fans projects or <a href = "https://github.com/charlesl46/movie_list">PyMWL</a></li>
-              </ul>
+      <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <h5><a class="language language--metis card-title" style = 'color: goldenrod;' href="https://www.python.org/">Python 3.10</a></h5>
+            <p class="card-text">My favourite language. I use it nearly everyday in large <a href = "./projects.html">projects</a> as well as in small utility scripts.
+            Here are some of my favourite python libs :</p>
+            <p class="card-text">
+            <ul class="list-group">
+              <li class="list-group-item"><a href = "https://docs.python.org/fr/3/library/os.html" ><code>os</code></a> embedded library, for automation projects, like folder cleaning and sorting.</li>
+              <li class="list-group-item"><a href = "https://pypi.org/project/requests/"><code>requests</code></a> library, for API projects and retrieving images.</li>
+              <li class="list-group-item"><a href = "https://pypi.org/project/wikipedia/"><code>wikipedia-api</code></a> library, for wikipedia projects, like little quiz games or <a href = "https://github.com/charlesl46/Wikipedia2LaTeX">PyWikipedia2LaTeX</a></li>
+              <li class="list-group-item"><a href = "https://pypi.org/project/tmdbv3api/"><code>tmdbv3api</code></a> library, for films fans projects or <a href = "https://github.com/charlesl46/movie_list">PyMWL</a></li>
+            </ul>
+            </p>
           </div>
         </div>
-        </div>
-
-
-        <!--C-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <h5 class="language language--metis" style = "color: cornflowerblue;">C17</h5>
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              I use it less, just for its compatibility in many domains, such as electronics and its speed compared to python.<br/>
-              I used <a href = "https://abyz.me.uk/rpi/pigpio/"><code class = "clib">pigpio</code></a> and <a href = "https://arnaud-feltz.developpez.com/tutoriels/ncurses/?page=premier_pas"><code class = "clib">ncurses</code></a> for some electronics.
-            </div>
+      
+        <div class="card">
+          <div class="card-body">
+            <h5><a class="language language--metis card-title" style = 'color: cornflowerblue;' href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a></h5>
+            <p class="card-text">I use it less, just for its compatibility in many domains, such as electronics and its speed compared to python.<br/>
+            I used <a href = "https://abyz.me.uk/rpi/pigpio/"><code class = "clib">pigpio</code></a> and <a href = "https://arnaud-feltz.developpez.com/tutoriels/ncurses/?page=premier_pas"><code class = "clib">ncurses</code></a> for some electronics.
+            </p>
           </div>
         </div>
-
-
-        <!--java-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              <h5 class="language language--metis" style = "color: brown;">Java 19</h5>
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              I'm now using it in a little RPG game project. I also worked on a compiler/interpreter project using <a class = "jlib" href = "https://javacc.github.io/javacc/"> java cc</a>.
-            </div>
+        <div class="card">
+          <div class="card-body">
+            <h5><a class="language language--metis card-title" style = 'color: brown;' href="https://www.python.org/">Java 19</a></h5>
+            <p class="card-text">I'm now using it in a little RPG game project. I also worked on a compiler/interpreter project using <a class = "jlib" href = "https://javacc.github.io/javacc/"> java cc</a>.
+            </p>
           </div>
         </div>
       </div>
@@ -94,10 +72,10 @@
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-    <li class="ms-3"><a class="text-body-secondary icon" href="https://github.com/charlesl46"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="grey" class="bi bi-github" viewBox="0 0 16 16">
+    <li class="ms-3"><a class="text-body-secondary icon" href="https://github.com/charlesl46"><svg class ="icon-link-github" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="grey" class="bi bi-github" viewBox="0 0 16 16">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
     </svg></a></li>
-    <li class="ms-3"><a class="text-body-secondary icon" href="mailto:lucas.charles@insa-rouen.fr"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="grey" class="bi bi-envelope" viewBox="0 0 16 16">
+    <li class="ms-3"><a class="text-body-secondary icon" href="mailto:lucas.charles@insa-rouen.fr"><svg  class ="icon-link-mail" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="grey" class="bi bi-envelope" viewBox="0 0 16 16">
         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
     </svg></a></li>
     </ul>

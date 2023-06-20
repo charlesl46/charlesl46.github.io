@@ -12,6 +12,23 @@
     font-family: "Space";
 }
 
+.icon-link-github:hover{
+    fill:goldenrod;
+}
+
+.icon-link-mail:hover{
+    fill: cornflowerblue;
+}
+
+.welcome{
+    text-shadow: goldenrod 1px 2px;
+}
+
+.activity{
+    text-shadow: cornflowerblue 1px 2px;
+}
+
+
 .language {
     cursor: pointer;
     font-style: italic;
@@ -84,15 +101,11 @@ a>code{
 }
 
 .clib{
-        font-family: monospace;
-        font-size:large;
         color:cornflowerblue;
 }
 
 .jlib{
-    font-family: monospace;
-    font-size:large;
-    color:darkred;
+    color:brown;
 }
 
 
