@@ -53,7 +53,6 @@
 </div>
 </div>
 
-
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
@@ -72,25 +71,42 @@
     </svg></a></li>
     </ul>
 </footer>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+<script >
+  // Votre code de configuration Firebase et la définition de la fonction saveToFirebase
   const firebaseConfig = {
     apiKey: "AIzaSyCum1IDnVDex_Z-NNcr2EW-oewe-UGMUK0",
     authDomain: "playlist-8a9d9.firebaseapp.com",
+    databaseURL: "https://playlist-8a9d9-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "playlist-8a9d9",
     storageBucket: "playlist-8a9d9.appspot.com",
     messagingSenderId: "474072854731",
     appId: "1:474072854731:web:0854b030b3a1b952e96b4e"
+    // Autres configurations Firebase
   };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
-</div>
+  // Initialisez Firebase
+  firebase.initializeApp(firebaseConfig);
 
+  function saveToFirebase() {
+    console.log("using function");
+    const song = document.getElementById("song-input").value;
+    firebase.database().ref('songs-pushed').push().set({ song: song })
+      .then(function(snapshot) {
+        console.log("Success")
+      })
+      .catch(function(error) {
+        console.log('error' + error);
+        error(); // Méthode d'erreur
+      });
+  }
+</script>
+
+<form>
+  <input type = "text" id = "song-input" />
+  <button onclick = "javascript:saveToFirebase()">test</button>
+</form>
+</div>
+</body>
 </html>
