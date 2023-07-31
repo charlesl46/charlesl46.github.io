@@ -91,16 +91,10 @@
   firebase.initializeApp(firebaseConfig);
 
   function saveToFirebase() {
-    console.log("using function");
     const song = document.getElementById("song-input").value;
-    firebase.database().ref('songs-pushed').push().set({ song: song })
-      .then(function(snapshot) {
-        console.log("Success")
-      })
-      .catch(function(error) {
-        console.log('error' + error);
-        error(); // Méthode d'erreur
-      });
+    console.log("using function with");
+    console.log(song)
+    firebase.database().set({ song: song });
   }
 </script>
 
