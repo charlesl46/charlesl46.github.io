@@ -72,36 +72,6 @@
     </svg></a></li>
     </ul>
 </footer>
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
-<script >
-  // Votre code de configuration Firebase et la définition de la fonction saveToFirebase
-  const firebaseConfig = {
-    apiKey: "AIzaSyCum1IDnVDex_Z-NNcr2EW-oewe-UGMUK0",
-    authDomain: "playlist-8a9d9.firebaseapp.com",
-    databaseURL: "https://playlist-8a9d9-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "playlist-8a9d9",
-    storageBucket: "playlist-8a9d9.appspot.com",
-    messagingSenderId: "474072854731",
-    appId: "1:474072854731:web:0854b030b3a1b952e96b4e"
-    // Autres configurations Firebase
-  };
-
-  // Initialisez Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  function saveToFirebase() {
-    const song = document.getElementById("song-input").value;
-    console.log("using function with");
-    console.log(song)
-    firebase.database().set({deja: song});
-  }
-</script>
-
-<form>
-  <input type = "text" id = "song-input" />
-  <button onclick = "javascript:saveToFirebase()">test</button>
-</form>
 </div>
 </body>
 </html>
