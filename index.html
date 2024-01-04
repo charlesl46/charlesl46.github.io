@@ -11,43 +11,34 @@
         <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script> 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
         <link rel="stylesheet" href="css/style.css">
+        <script src="app.js"></script>
     </head>
-    <body style="margin-top: 30px; margin-bottom: 30px;">
+    <body id="mainbody" style="margin-top: 30px; margin-bottom: 30px;">
         <div>
         <h1>Lucas Charles</h1>
         <p>21 years old, currently studying CS in 4th year at <a href="https://www.insa-rouen.fr/formation/specialites-ingenieurses/informatique-et-technologie-de-linformation">INSA Rouen Normandie</a>, Northern France.</p>
         <h4>Contact</h4>
-        <a href="https://github.com/charlesl46"><div class="ui large vertical animated button" tabindex="0">
-            <div class="hidden content"><i class="right arrow icon"></i></div>
-            <div class="visible content">
+        <div class="ui big icon buttons">
+            <a id="gh_icon" href="https://github.com/charlesl46" class="ui button">
               <i class="github icon"></i>
-            </div>
-        </div></a>
-        <a href="https://www.linkedin.com/in/lucas-charles-3a075b20a/"><div class="ui large vertical animated button" tabindex="0">
-            <div class="hidden content"><i class="right arrow icon"></i></div>
-            <div class="visible content">
+            </a>
+            <a id="lk_icon" href="https://www.linkedin.com/in/lucas-charles-3a075b20a/" class="ui button">
               <i class="linkedin icon"></i>
-            </div>
-        </div></a>
-        <a href="https://www.codingame.com/profile/8bf3f0383cf718e190359d1b61dd3e8d0498174"><div class="ui large vertical animated button" tabindex="0">
-            <div class="hidden content"><i class="right arrow icon"></i></div>
-            <div class="visible content">
+            </a>
+            <a id="code_icon" href="https://www.codingame.com/profile/8bf3f0383cf718e190359d1b61dd3e8d0498174" class="ui button">
               <i class="code icon"></i>
-            </div>
-        </div></a>
-        <a href="mailto:lucas.charles@insa-rouen.fr"><div class="ui large vertical animated button" tabindex="0">
-            <div class="hidden content"><i class="right arrow icon"></i></div>
-            <div class="visible content">
+            </a>
+            <a id="mail_icon" href="mailto:lucas.charles@insa-rouen.fr" class="ui button">
                 <i class="envelope icon"></i>
-            </div>
-        </div></a>
-        <a style="font-family: 'space-mono';" href="https://fr.wikipedia.org/wiki/Occitanie_(r%C3%A9gion_culturelle)" class="ui large basic button">
+            </a>
+        </div>
+        <a style="font-family: 'space-mono';" href="https://fr.wikipedia.org/wiki/Occitanie_(r%C3%A9gion_culturelle)" class="ui big basic labeled icon button">
             <i class="globe icon"></i>
             Occitanie, France
         </a>
         <div class="ui section divider"></div>
         <h2>Career</h2>
-        <div style="font-size: large;" class="ui large feed">
+        <div style="font-size: large;" class="ui large connected feed">
             <div class="event">
                 <div class="label">
                     <i class="code icon"></i>
@@ -163,15 +154,15 @@
         <h2>Activity</h2>
         <h3>Skills</h3>
         <div class="ui big labels">
-            <div data-tooltip="Many frameworks including django, numpy and matplotlib" data-variation="huge" class="ui label" style="font-size: large;">
+            <div id="python_icon" data-tooltip="Many frameworks including django, numpy and matplotlib" data-variation="huge" class="ui label" style="font-size: large;">
                 <i class="python icon"></i>
                 Python
             </div>
-            <div class="ui label" style="font-size: large;">
+            <div id="express_icon" class="ui label" style="font-size: large;">
                 <i class="node js icon"></i>
                 Express
             </div>
-            <div data-tooltip="Knowledge of Fomantic UI and Bulma css frameworks and JQuery" data-variation="huge" class="ui label" style="font-size: large;">
+            <div id="html_icon" data-tooltip="Knowledge of Fomantic UI and Bulma css frameworks and JQuery" data-variation="huge" class="ui label" style="font-size: large;">
                 <i class="html5 icon"></i>
                 HTML/CSS/JS
             </div>
@@ -191,19 +182,19 @@
                 <i class="terminal icon"></i>
                 bash/zsh
             </div>
-            <div data-tooltip="Mostly used for projet reports, also used LyX a lot" data-variation="huge" class="ui label" style="font-size: large;">
+            <div id="latex_icon" data-tooltip="Mostly used for projet reports, also used LyX a lot" data-variation="huge" class="ui label" style="font-size: large;">
                 <i class="i cursor icon"></i>
                 LaTeX
             </div>
-            <div data-tooltip="Mostly used BS4 in Python but got a little knowledge with Cheerio in JS" data-variation="huge" class="ui label" style="font-size: large;">
+            <div id="scraping_icon" data-tooltip="Mostly used BS4 in Python but got a little knowledge with Cheerio in JS" data-variation="huge" class="ui label" style="font-size: large;">
                 <i class="spider icon"></i>
                 Web scraping
             </div>
-            <div data-tooltip="Mostly worked with sklearn" data-variation="huge" class="ui label" style="font-size: large;">
+            <div id="ml_icon" data-tooltip="Mostly worked with sklearn" data-variation="huge" class="ui label" style="font-size: large;">
                 <i class="brain icon"></i>
                 ML
             </div>
-            <div class="ui label" style="font-size: large;">
+            <div id="java_icon" class="ui label" style="font-size: large;">
                 <i class="java icon"></i>
                 Java
             </div>
@@ -215,13 +206,13 @@
                 <i class="globe icon"></i>
                 APIs
             </div>
-            <div class="ui label" style="font-size: large;">
+            <div id="docker_icon" class="ui label" style="font-size: large;">
                 <i class="docker icon"></i>
                 Docker
             </div>
         </div>
 
-        <h3>Projects</h3>
+        <h3 id="projects">Projects</h3>
         <div class="ui two stackable cards">
             <div class="ui green raised card">
                 <div class="content">
@@ -263,7 +254,7 @@
                         <div class="right floated meta">
                             <div class="ui big labels">
                                 <div data-tooltip="This project is currently being developed" class="ui icon label">
-                                    <div class="ui active tiny orange elastic inline loader"></div>
+                                    <i class="orange hourglass outline icon"></i>
                                 </div>
                                 <div class="ui icon label">
                                     <a href="http://www.or2s.fr/"><i class="globe icon"></i></a>
@@ -304,7 +295,7 @@
                         <div class="right floated meta">
                             <div class="ui big labels">
                                 <div data-tooltip="This project is currently being developed" class="ui icon label">
-                                    <div class="ui active tiny orange elastic inline loader"></div>
+<i class="orange hourglass outline icon"></i>
                                 </div>
                                 <div class="ui icon label">
                                     <a href="https://github.com/charlesl46/open-scolaris"><i class="github icon"></i></a>
@@ -343,7 +334,7 @@
                         <div class="right floated meta">
                             <div class="ui big labels">
                                 <div data-tooltip="This project is currently being developed" class="ui icon label">
-                                    <div class="ui active tiny orange elastic inline loader"></div>   
+<i class="orange hourglass outline icon"></i>   
                                 </div>
                                 <div class="ui icon label">
                                     <a href="https://github.com/charlesl46/song-generation-using-markov-chain"><i class="github icon"></i></a>
@@ -378,7 +369,7 @@
                         <div class="right floated meta">
                             <div class="ui big labels">
                                 <div data-tooltip="This project is currently being developed" class="ui icon label">
-                                    <div class="ui active tiny orange elastic inline loader"></div>
+<i class="orange hourglass outline icon"></i>
                                 </div>
                                 <div class="ui icon label">
                                     <a href="https://github.com/charlesl46/football_players_data_fifa"><i class="github icon"></i></a>
@@ -560,7 +551,7 @@
         </div>
     </div>
     <h3>Events</h3>
-    <div style="font-size: large;" class="ui large feed">
+    <div style="font-size: large;" class="ui large connected feed">
         <div class="event">
             <div class="label">
                 <i class="medal icon"></i>
@@ -604,6 +595,10 @@
             </div>
         </div>
     </div>
+    <h3>Recent works</h3>
+    <div id="recentworks" class="ui loading segment">
+
+    </div>
     <div class="ui section divider"></div>
     <div class="ui center aligned secondary segment" style="padding:15px;">
         <h2 class="ui header">Lucas Charles <div style="font-size: small;" class="ui label">
@@ -613,4 +608,30 @@
     </div>
     <br>
     </body>
+    <script>
+        let icon_colors = {
+            gh_icon : "black",
+            lk_icon: "blue",
+            code_icon: "orange",
+            mail_icon : "red",
+            python_icon : "blue",
+            express_icon : "green",
+            html_icon : "orange",
+            latex_icon : "green",
+            scraping_icon : "red",
+            ml_icon : "blue",
+            java_icon : "blue",
+            docker_icon : "blue"
+        };
+
+        for (let key in icon_colors) {
+            console.log(key);
+            $(`#${key}`).hover(function(){
+                $(this).find(".icon").addClass(icon_colors[key]);
+            })
+            $(`#${key}`).mouseleave(function(){
+                $(this).find(".icon").removeClass(icon_colors[key]);
+            })
+        }
+    </script>
 </html>
