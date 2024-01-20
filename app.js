@@ -18,12 +18,13 @@ $(document).ready(function() {
             });
             var latestContribution = contributions[0];
             if (latestContribution) {
+                console.log(latestContribution);
                 var repoName = latestContribution.repo.name;
                 var commitMessage = latestContribution.payload.commits[0].message;
                 var date = latestContribution.created_at;
                 var dateObject = new Date(date);
                 var day = dateObject.getUTCDate();
-                var month = dateObject.getUTCMonth() + 1; // Les mois commencent à 0, donc ajoutez 1
+                var month = dateObject.getUTCMonth() + 1;
                 var year = dateObject.getUTCFullYear();
 
                 var formattedDate = `${day}/${month}/${year.toString().slice(-2)}`;
@@ -38,7 +39,7 @@ $(document).ready(function() {
                           </div>
                           <div class="content">
                             <div class="summary">
-                               <a>${repoName}</a> - <em>${commitMessage}</em>
+                               <a href="https://github.com/${repoName}">${repoName}</a> - <em>${commitMessage}</em>
                               <div class="date">${formattedDate}</div>
                             </div>
                           </div>
