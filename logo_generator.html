@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Logo Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+    <style>
+        body {
+            overflow: hidden;
+            background-color: white;
+        }
+        #canvasegment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="ui grid">
+        <div class="twelve wide column">
+            <div id="canvasegment" class="ui teal raised segment" style="width: 95%; height: 90%; margin: auto; margin-top: 50px;">
+                <canvas id="myCanvas"></canvas>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui orange raised segment" style="width:90%; margin: auto; margin-top: 50px;">
+                <h2 class="ui header">Parameters</h2>
+                <form class="ui form">
+                    <div class="ui field">
+                        <label>Title</label>
+                        <input id="textpicker" type="text" value="Logo Maker">
+                    </div>
+                    <div class="ui divider"></div>
+                    <div class="ui field">
+                        <label>Color : </label>
+                        <input id="colorpicker" value="#3399FF" data-jscolor="{}">
+                    </div>
+                    <div id="fontdropdown" class="ui field">
+                        <label>Font : </label>
+                        <select id="fontselect" class="ui search dropdown">
+
+                        </select>
+                    </div>
+                    <div class="ui button"><i class="dice icon"></i>Randomize</div>
+                    <div id="downloadBtn" class="ui button"><i class="download icon"></i>Télécharger</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jscolor.js"></script>
+    <script>
+        $("#fontselect").load("fonts.html");
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const segment = canvas.parentElement;
+        canvas.width = segment.clientWidth;
+        canvas.height = segment.clientHeight;
+
+        const fontselect = document.getElementById('fontselect');
+        const colorpicker = document.getElementById('colorpicker');
+        const textpicker = document.getElementById('textpicker');
+
+        console.log(fontselect.value);
+        if (fontselect.value == ""){
+            fontselect.value = "Agnes.ttf";
+        }
+
+        const font = new FontFace(fontselect.value, `url(fonts/${fontselect.value}.ttf)`);
+        font.load().then(() => {
+            document.fonts.add(font);
+            ctx.font = '120px ' + fontselect.value;
+            ctx.fillStyle = colorpicker.value;
+            const text = textpicker.value;
+            drawText(text);
+        });
+
+        textpicker.addEventListener('input',()=>{
+            const text = textpicker.value;
+            drawText(text);
+        });
+
+        fontselect.addEventListener('input', () => {
+            const font = new FontFace(fontselect.value, `url(fonts/${fontselect.value}.ttf)`);
+            font.load().then(() => {
+                document.fonts.add(font);
+                ctx.font = '120px ' + fontselect.value;
+                ctx.fillStyle = colorpicker.value;
+                const text = textpicker.value;
+                drawText(text);
+            });
+        });
+
+        colorpicker.addEventListener('input', () => {
+            ctx.fillStyle = colorpicker.value;
+            const text = textpicker.value;
+            drawText(text);
+        });
+
+        function drawText(text) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const textWidth = ctx.measureText(text).width;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+        }
+
+        const downloadBtn = document.getElementById('downloadBtn');
+        downloadBtn.addEventListener('click', () => {
+            const dataURL = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.href = dataURL;
+            link.download = 'logo.png';
+            link.click();
+        });
+    </script>
+</body>
+</html
