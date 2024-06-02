@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Temps de travail
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+</head>
+<body>
+    <div class="ui segment" style="margin: 10px;">
+        <h1 class="ui header">Calculateur de temps de travail</h1>
+        Le matin
+        <div class="ui form">
+            <div class="two fields">
+              <div class="field">
+                <label>Début</label>
+                <div class="ui calendar" id="morning-rangestart">
+                  <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input type="text" placeholder="Début">
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Fin</label>
+                <div class="ui calendar" id="morning-rangeend">
+                  <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input type="text" placeholder="Fin">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        Le soir
+        <div class="ui form">
+            <div class="two fields">
+              <div class="field">
+                <label>Début</label>
+                <div class="ui calendar" id="afternoon-rangestart">
+                  <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input type="text" placeholder="Début">
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Fin</label>
+                <div class="ui calendar" id="afternoon-rangeend">
+                  <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input type="text" placeholder="Fin">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+    
+        <button class="ui button">Valider</button>
+        <p>Cette journée fait <span id="result">0</span> heures.</p>
+    </div>
+
+    <script>
+        $('#morning-rangestart').calendar({
+            type: 'time',
+            formatter: {
+                time: 'H:mm',
+                cellTime: 'H:mm'
+            },
+            endCalendar: $('#morning-rangeend')
+        });
+        $('#morning-rangeend').calendar({
+            type: 'time',
+            formatter: {
+                time: 'H:mm',
+                cellTime: 'H:mm'
+            },
+            startCalendar: $('#morning-rangestart')
+        });
+
+        $('#afternoon-rangestart').calendar({
+            type: 'time',
+            formatter: {
+                time: 'H:mm',
+                cellTime: 'H:mm'
+            },
+            endCalendar: $('#afternoon-rangeend')
+        });
+        $('#afternoon-rangeend').calendar({
+            type: 'time',
+            formatter: {
+                time: 'H:mm',
+                cellTime: 'H:mm'
+            },
+            startCalendar: $('#afternoon-rangestart')
+        });
+
+        function msToHours(ms){
+            const hours = ms / (1000 * 60 * 60);
+            return hours;
+        };
+
+        $("button").click(function(){
+            var morning = $('#morning-rangeend').calendar("get date") - $('#morning-rangestart').calendar("get date");
+            morning = msToHours(morning);
+            var afternoon = $('#afternoon-rangeend').calendar("get date") - $('#afternoon-rangestart').calendar("get date");
+            afternoon = msToHours(afternoon);
+
+            var result = morning + afternoon;
+            $("#result").text(result);
+        });
+        
+    </script>
+</body>
+</html
