@@ -6,6 +6,7 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
         <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
     </head>
     <body>
         <style>
@@ -16,9 +17,11 @@
             .ui.segment.margin {
                 padding: 1em;
             }
+
             .ui.segment .ui.segment {
                 padding: 0;
             }
+
             .ui.segment .ui.icon.input textarea {
                 width: 100%;
                 height: 100%;
@@ -26,37 +29,49 @@
                 resize: none;
                 padding: 1em;
             }
+
             .ui.segment .ui.icon.input {
                 width: 100%;
                 height: 100%;
             }
+
             .ui.segment .ui.icon.input > textarea {
                 width: calc(100% - 2em);
                 height: calc(100% - 2em);
             }
         </style>
         <h1 class="ui header center aligned">Markdown preview</h1>
-        <div class="ui grid" style="margin-top: 30px">
+        <div class="ui grid" style="margin-top: 15px; margin-left: 3%; margin-right: 3%;">
+
             <div class="eight wide column">
                 <div class="ui segment margin">
                     <h2 class="ui header">Raw markdown</h2>
                     <div class="ui segment">
                         <div class="ui icon input">
-                            <textarea></textarea>
+                            <textarea id="markdown"></textarea>
                         </div>
                     </div>
                 </div>
             </div>
+            
             <div class="eight wide column">
                 <div class="ui segment margin">
                     <h2 class="ui header">Preview</h2>
-                    <div class="ui segment">
+                    <div id="preview" class="ui segment" style="padding: 1em;">
                         
                     </div>
-                    
                 </div>
             </div>
-        </div>
 
+        </div>
+        <script>
+            showdown.setFlavor('github');
+            var converter = new showdown.Converter();
+            $("#markdown").keyup(function(){
+                var content = $(this).val();
+                html = converter.makeHtml(content);
+                $("#preview").html(html);
+            });
+        </script>
     </body>
 </html
