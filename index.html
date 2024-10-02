@@ -1,48 +1,85 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Resume - CHARLES Lucas</title>
-        <link rel="icon" href="https://github.githubassets.com/pinned-octocat.svg">   
-        <meta charset="UTF-8">
-        <meta name="description" content="My portofolio/resume website, hosted by github pages.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="keywords" content="portofolio,github,pages,HTML,CSS,XML,JavaScript">
-        <link rel="author" href="https://charlesl46.github.io">
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script> 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/index.js"></script>
-    </head>
-    <body id="mainbody" style="margin-top: 30px; margin-bottom: 30px;">
-        <div>
+
+<head>
+    <title>Resume - CHARLES Lucas</title>
+    <link rel="icon" href="https://github.githubassets.com/pinned-octocat.svg">
+    <meta charset="UTF-8">
+    <meta name="description" content="My portofolio/resume website, hosted by github pages.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="portofolio,github,pages,HTML,CSS,XML,JavaScript">
+    <link rel="author" href="https://charlesl46.github.io">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+</head>
+
+<body id="mainbody" style="margin-top: 30px; margin-bottom: 30px;">
+    <div>
         <h1>Lucas Charles</h1>
-        <p><span id="age"></span> years old, currently studying CS in 4th year at <a href="https://www.insa-rouen.fr/formation/specialites-ingenieurses/informatique-et-technologie-de-linformation">INSA Rouen Normandie</a>, Northern France.</p>
+        <p><span id="age"></span> years old, currently studying CS in 5th year at <a
+                href="https://www.insa-rouen.fr/formation/specialites-ingenieurses/informatique-et-technologie-de-linformation">INSA
+                Rouen Normandie</a>, Northern France.</p>
         <script src="js/age.js"></script>
         <h4>Contact</h4>
         <div class="ui big icon buttons">
             <a id="gh_icon" href="https://github.com/charlesl46" class="ui button">
-              <i class="github icon"></i>
+                <i class="github icon"></i>
             </a>
             <a id="lk_icon" href="https://www.linkedin.com/in/lucas-charles-3a075b20a/" class="ui button">
-              <i class="linkedin icon"></i>
+                <i class="linkedin icon"></i>
             </a>
-            <a id="code_icon" href="https://www.codingame.com/profile/8bf3f0383cf718e190359d1b61dd3e8d0498174" class="ui button">
-              <i class="code icon"></i>
+            <a id="code_icon" href="https://www.codingame.com/profile/8bf3f0383cf718e190359d1b61dd3e8d0498174"
+                class="ui button">
+                <i class="code icon"></i>
             </a>
             <a id="mail_icon" href="mailto:lucas.charles@insa-rouen.fr" class="ui button">
                 <i class="envelope icon"></i>
             </a>
         </div>
-        <a style="font-family: 'space-mono';" href="https://fr.wikipedia.org/wiki/Occitanie_(r%C3%A9gion_culturelle)" class="ui big basic labeled icon button">
+        <a style="font-family: 'space-mono';" href="https://fr.wikipedia.org/wiki/Occitanie_(r%C3%A9gion_culturelle)"
+            class="ui big basic labeled icon button">
             <i class="globe icon"></i>
             Occitanie, France
         </a>
         <div class="ui section divider"></div>
         <h2>Career</h2>
         <div style="font-size: large;" class="ui large connected feed">
+
+            <div class="event">
+                <div class="label">
+                    <i class="globe icon"></i>
+                </div>
+                <div class="content">
+                    <div class="summary">
+                        Abroad semester in Argentina at <a href="https://www.unc.edu.ar/">UNC</a>
+                        <div style="font-size: medium;" class="ui label">
+                            <i class="calendar alternate outline icon"></i>August - December 2024
+                            <i class="location arrow icon"></i>Córdoba
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="label">
+                    <i class="code icon"></i>
+                </div>
+                <div class="content">
+                    <div class="summary">
+                        IT engineering department (3rd year)
+                        <div style="font-size: medium;" class="ui label" style="display: flex; align-items: center;">
+                            <i class="calendar alternate outline icon"></i>2024 - 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="event">
                 <div class="label">
@@ -55,9 +92,10 @@
                             <i class="calendar alternate outline icon"></i>Summer 2024
                             <i class="location arrow icon"></i>Occitanie
                         </div>
-                        <div style="font-size: medium; color: gray; font-style: italic;" class="extra text">
-                            specialist internship in Python API development to wrap a STAC API to retrieve satellite images                        
-                        </div>
+                    </div>
+                    <div style="font-size: medium; color: gray; font-style: italic;" class="extra text">
+                        specialist internship in Python API development to wrap a STAC API to retrieve satellite
+                        images
                     </div>
                 </div>
             </div>
@@ -67,13 +105,13 @@
                     <i class="code icon"></i>
                 </div>
                 <div class="content">
-                  <div class="summary">
-                     IT engineering department (2nd year)
-                     <div style="font-size: medium;" class="ui label">
-                        <i class="calendar alternate outline icon"></i>2023 - 2024
-                        <i class="location arrow icon"></i>Normandie
+                    <div class="summary">
+                        IT engineering department (2nd year)
+                        <div style="font-size: medium;" class="ui label">
+                            <i class="calendar alternate outline icon"></i>2023 - 2024
+                            <i class="location arrow icon"></i>Normandie
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
 
@@ -82,15 +120,15 @@
                     <i class="atom icon"></i>
                 </div>
                 <div class="content">
-                  <div class="summary">
+                    <div class="summary">
                         Internship at <a href="https://www.cea.fr/">CEA</a>
                         <div style="font-size: medium;" class="ui label">
                             <i class="calendar alternate outline icon"></i>Summer 2023
                         </div>
-                  </div>
-                  <div style="font-size: medium; color: gray; font-style: italic;" class="extra text">
-                    technician internship in image processing and computer vision using Python at a research center
-                </div>
+                    </div>
+                    <div style="font-size: medium; color: gray; font-style: italic;" class="extra text">
+                        technician internship in image processing and computer vision using Python at a research center
+                    </div>
                 </div>
             </div>
 
@@ -99,13 +137,13 @@
                     <i class="code icon"></i>
                 </div>
                 <div class="content">
-                  <div class="summary">
+                    <div class="summary">
                         IT engineering department (1st year)
                         <div style="font-size: medium;" class="ui label">
                             <i class="calendar alternate outline icon"></i>2022 - 2023
                             <i class="location arrow icon"></i>Normandie
                         </div>
-                  </div>
+                    </div>
                 </div>
             </div>
 
@@ -114,13 +152,13 @@
                     <i class="university icon"></i>
                 </div>
                 <div class="content">
-                  <div class="summary">
-                    First grade (2nd year)
-                    <div style="font-size: medium;" class="ui label">
-                        <i class="calendar alternate outline icon"></i>2021 - 2022
-                        <i class="location arrow icon"></i>Normandie
+                    <div class="summary">
+                        First grade (2nd year)
+                        <div style="font-size: medium;" class="ui label">
+                            <i class="calendar alternate outline icon"></i>2021 - 2022
+                            <i class="location arrow icon"></i>Normandie
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
 
@@ -130,11 +168,11 @@
                 </div>
                 <div class="content">
                     <div class="summary">
-                    Internship at <a href="https://www.capel.fr/">CAPEL</a>
-                    <div style="font-size: medium;" class="ui label">
-                        <i class="calendar alternate outline icon"></i>Summer 2021
-                        <i class="location arrow icon"></i>Occitanie
-                    </div>
+                        Internship at <a href="https://www.capel.fr/">CAPEL</a>
+                        <div style="font-size: medium;" class="ui label">
+                            <i class="calendar alternate outline icon"></i>Summer 2021
+                            <i class="location arrow icon"></i>Occitanie
+                        </div>
                     </div>
                     <div style="font-size: medium; color: gray; font-style: italic;" class="extra text">
                         operator placement in a factory
@@ -148,44 +186,43 @@
                     <i class="university icon"></i>
                 </div>
                 <div class="content">
-                  <div class="summary">
-                    First grade (1st year)
-                    <div style="font-size: medium;" class="ui label">
-                        <i class="calendar alternate outline icon"></i>2020 - 2021
-                        <i class="location arrow icon"></i>Normandie
+                    <div class="summary">
+                        First grade (1st year)
+                        <div style="font-size: medium;" class="ui label">
+                            <i class="calendar alternate outline icon"></i>2020 - 2021
+                            <i class="location arrow icon"></i>Normandie
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
 
             <div class="event">
-              <div class="label">
-                <i class="school icon"></i>
-              </div>
-              <div class="content">
-                <div class="summary">
-                    Baccalauréat
-                    <div style="font-size: medium;" class="ui label">
-                        <i class="calendar alternate outline icon"></i>2020
-                        <i class="location arrow icon"></i>Occitanie
+                <div class="label">
+                    <i class="school icon"></i>
+                </div>
+                <div class="content">
+                    <div class="summary">
+                        Baccalauréat
+                        <div style="font-size: medium;" class="ui label">
+                            <i class="calendar alternate outline icon"></i>2020
+                            <i class="location arrow icon"></i>Occitanie
+                        </div>
                     </div>
                 </div>
-              </div>
             </div>
         </div>
         <div class="ui section divider"></div>
         <h2>Activity</h2>
         <h3>Skills</h3>
         <div class="ui big labels">
-            <div id="python_icon" data-tooltip="Many frameworks including django, numpy and matplotlib" data-variation="huge" class="ui label" style="font-size: large;">
+            <div id="python_icon" data-tooltip="Many frameworks including django, numpy and matplotlib"
+                data-variation="huge" class="ui label" style="font-size: large;">
                 <i class="python icon"></i>
                 Python
             </div>
-            <div id="express_icon" class="ui label" style="font-size: large;">
-                <i class="node js icon"></i>
-                Express
-            </div>
-            <div id="html_icon" data-tooltip="Knowledge of Fomantic UI and Bulma css frameworks and JQuery" data-variation="huge" class="ui label" style="font-size: large;">
+            
+            <div id="html_icon" data-tooltip="Knowledge of Fomantic UI and Bulma css frameworks and JQuery"
+                data-variation="huge" class="ui label" style="font-size: large;">
                 <i class="html5 icon"></i>
                 HTML/CSS/JS
             </div>
@@ -197,23 +234,29 @@
                 <i class="git icon"></i>
                 Git (GitHub & GitLab)
             </div>
-            <div data-tooltip="Mostly used GitLab CI/CD pipelines" data-variation="huge" class="ui label" style="font-size: large;">
+            <div data-tooltip="Mostly used GitLab CI/CD pipelines" data-variation="huge" class="ui label"
+                style="font-size: large;">
                 <i class="code branch icon"></i>
                 CI/CD
             </div>
-            <div data-tooltip="Knowledge of all native GNU command line tools" data-variation="huge" class="ui label" style="font-size: large;">
+            <div data-tooltip="Knowledge of all native GNU command line tools" data-variation="huge" class="ui label"
+                style="font-size: large;">
                 <i class="terminal icon"></i>
                 bash/zsh
             </div>
-            <div id="latex_icon" data-tooltip="Mostly used for projet reports, also used LyX a lot" data-variation="huge" class="ui label" style="font-size: large;">
+            <div id="latex_icon" data-tooltip="Mostly used for projet reports, also used LyX a lot"
+                data-variation="huge" class="ui label" style="font-size: large;">
                 <i class="i cursor icon"></i>
                 LaTeX
             </div>
-            <div id="scraping_icon" data-tooltip="Mostly used BS4 in Python but got a little knowledge with Cheerio in JS" data-variation="huge" class="ui label" style="font-size: large;">
+            <div id="scraping_icon"
+                data-tooltip="Mostly used BS4 in Python but got a little knowledge with Cheerio in JS"
+                data-variation="huge" class="ui label" style="font-size: large;">
                 <i class="spider icon"></i>
                 Web scraping
             </div>
-            <div id="ml_icon" data-tooltip="Mostly worked with sklearn" data-variation="huge" class="ui label" style="font-size: large;">
+            <div id="ml_icon" data-tooltip="Mostly worked with sklearn" data-variation="huge" class="ui label"
+                style="font-size: large;">
                 <i class="brain icon"></i>
                 ML
             </div>
@@ -221,7 +264,8 @@
                 <i class="java icon"></i>
                 Java
             </div>
-            <div data-tooltip="Mostly worked with numpy and pandas" data-variation="huge" class="ui label" style="font-size: large;">
+            <div data-tooltip="Mostly worked with numpy and pandas" data-variation="huge" class="ui label"
+                style="font-size: large;">
                 <i class="percentage icon"></i>
                 Data science
             </div>
@@ -242,17 +286,22 @@
                     <div itemprop="name" class="header">Phil
                         <div class="right floated meta">
                             <div class="ui big labels">
-                                <div itemprop="status" data-tooltip="This project is currently being developed" class="ui icon label">
+                                <div itemprop="status" data-tooltip="This project is currently being developed"
+                                    class="ui icon label">
                                     <i class="orange hourglass outline icon"></i>
                                 </div>
                                 <div class="ui icon label">
-                                    <a itemprop="codeRepository" href="https://github.com/charlesl46/phil"><i class="github icon"></i></a>
+                                    <a itemprop="codeRepository" href="https://github.com/charlesl46/phil"><i
+                                            class="github icon"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div itemprop="description" style="font-size: medium;" class="description">
-                        Multifunctional personal assistant using TMDb, Wikipedia, and other APIs. It performs tasks like fetching information, showing system statistics, weather updates, translations, and more. The assistant has user profiles, tracks statistics, and engages in interactive dialogues, showcasing skills in web scraping, API integration, and natural language processing.                    </div>
+                        Multifunctional personal assistant using TMDb, Wikipedia, and other APIs. It performs tasks like
+                        fetching information, showing system statistics, weather updates, translations, and more. The
+                        assistant has user profiles, tracks statistics, and engages in interactive dialogues, showcasing
+                        skills in web scraping, API integration, and natural language processing. </div>
                 </div>
                 <div class="extra content">
                     <div class="ui big labels">
@@ -276,7 +325,8 @@
                     <div itemid="name" class="header">PIC Big Data
                         <div class="right floated meta">
                             <div class="ui big labels">
-                                <div itemprop="name" data-tooltip="This project is currently being developed" class="ui icon label">
+                                <div itemprop="name" data-tooltip="This project is currently being developed"
+                                    class="ui icon label">
                                     <i class="orange hourglass outline icon"></i>
                                 </div>
                                 <div class="ui icon label">
@@ -287,7 +337,8 @@
                     </div>
                     <div itemprop="description" style="font-size: medium;" class="description">
                         This project is carried out in collaboration between the school and OR2S.
-                        It aims to optimize the OR2S data warehouse by implementing a flexible system for real-time indicator calculations, addressing current limitations in processing time.
+                        It aims to optimize the OR2S data warehouse by implementing a flexible system for real-time
+                        indicator calculations, addressing current limitations in processing time.
                         It will take place over 1 year in 2024.
                     </div>
                 </div>
@@ -317,17 +368,22 @@
                     <div itemprop="name" class="header">OpenScolaris
                         <div class="right floated meta">
                             <div class="ui big labels">
-                                <div itemprop="status" data-tooltip="This project is currently being developed" class="ui icon label">
-<i class="orange hourglass outline icon"></i>
+                                <div itemprop="status" data-tooltip="This project is currently being developed"
+                                    class="ui icon label">
+                                    <i class="orange hourglass outline icon"></i>
                                 </div>
                                 <div itemprop="codeRepository" class="ui icon label">
-                                    <a href="https://github.com/charlesl46/open-scolaris"><i class="github icon"></i></a>
+                                    <a href="https://github.com/charlesl46/open-scolaris"><i
+                                            class="github icon"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div itemprop="description" style="font-size: medium;" class="description">
-                        OpenScolaris is a Django application designed for efficient management of administrative tasks within educational institutions. The system features a robust user authentication system catering to administrators, teachers, and students. It aims to look like something like Pronote in France                
+                        OpenScolaris is a Django application designed for efficient management of administrative tasks
+                        within educational institutions. The system features a robust user authentication system
+                        catering to administrators, teachers, and students. It aims to look like something like Pronote
+                        in France
                     </div>
                 </div>
                 <div class="extra content">
@@ -356,17 +412,21 @@
                     <div itemprop="name" class="header">MarkovSinger
                         <div class="right floated meta">
                             <div class="ui big labels">
-                                <div itemprop="status" data-tooltip="This project is currently being developed" class="ui icon label">
-<i class="orange hourglass outline icon"></i>   
+                                <div itemprop="status" data-tooltip="This project is currently being developed"
+                                    class="ui icon label">
+                                    <i class="orange hourglass outline icon"></i>
                                 </div>
                                 <div itemprop="codeRepository" class="ui icon label">
-                                    <a href="https://github.com/charlesl46/song-generation-using-markov-chain"><i class="github icon"></i></a>
+                                    <a href="https://github.com/charlesl46/song-generation-using-markov-chain"><i
+                                            class="github icon"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div itemprop="description" style="font-size: medium;" class="description">
-                        This project aims to generate music lyrics using markov chain trained by the <a href="https://www.kaggle.com/datasets/notshrirang/spotify-million-song-dataset">Spotify Million Song Dataset</a>
+                        This project aims to generate music lyrics using markov chain trained by the <a
+                            href="https://www.kaggle.com/datasets/notshrirang/spotify-million-song-dataset">Spotify
+                            Million Song Dataset</a>
                     </div>
                 </div>
                 <div class="extra content">
@@ -391,17 +451,20 @@
                     <div itemprop="name" class="header">FIFA Regression
                         <div class="right floated meta">
                             <div class="ui big labels">
-                                <div itemprop="status" data-tooltip="This project is currently being developed" class="ui icon label">
-<i class="orange hourglass outline icon"></i>
+                                <div itemprop="status" data-tooltip="This project is currently being developed"
+                                    class="ui icon label">
+                                    <i class="orange hourglass outline icon"></i>
                                 </div>
                                 <div itemprop="codeRepository" class="ui icon label">
-                                    <a href="https://github.com/charlesl46/football_players_data_fifa"><i class="github icon"></i></a>
+                                    <a href="https://github.com/charlesl46/football_players_data_fifa"><i
+                                            class="github icon"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div itemprop="description" style="font-size: medium;" class="description">
-                        This project aims to perform a regression on FIFA video game players data to predict their final overall rating in the game
+                        This project aims to perform a regression on FIFA video game players data to predict their final
+                        overall rating in the game
                     </div>
                 </div>
                 <div class="extra content">
@@ -440,7 +503,10 @@
                         </div>
                     </div>
                     <div itemprop="description" style="font-size: medium;" class="description">
-                        This Python module, utilizing TMDb API and a custom database structure, manages a WatchList class. Users can interact with the watchlist through a command-line menu, allowing actions like viewing, adding, removing movies, getting suggestions, and emptying the watchlist. The module provides a straightforward and visual interface for efficient movie management.                    </div>
+                        This Python module, utilizing TMDb API and a custom database structure, manages a WatchList
+                        class. Users can interact with the watchlist through a command-line menu, allowing actions like
+                        viewing, adding, removing movies, getting suggestions, and emptying the watchlist. The module
+                        provides a straightforward and visual interface for efficient movie management. </div>
                 </div>
                 <div class="extra content">
                     <div class="ui big labels">
@@ -468,13 +534,17 @@
                                     <i class="green check icon"></i>
                                 </div>
                                 <div class="ui icon label">
-                                    <a href="https://github.com/charlesl46/Wikipedia2LaTeX"><i class="github icon"></i></a>
+                                    <a href="https://github.com/charlesl46/Wikipedia2LaTeX"><i
+                                            class="github icon"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div style="font-size: medium;" class="description">
-                        This python project takes wikipedia articles and converts them to LaTeX format. It uses various libraries and functionalities for fetching content, conversion, and preprocessing. Users can input a Wikipedia article title, choose a language, and the script converts the article to a PDF file with LaTeX formatting.
+                        This python project takes wikipedia articles and converts them to LaTeX format. It uses various
+                        libraries and functionalities for fetching content, conversion, and preprocessing. Users can
+                        input a Wikipedia article title, choose a language, and the script converts the article to a PDF
+                        file with LaTeX formatting.
                     </div>
                 </div>
                 <div class="extra content">
@@ -507,13 +577,17 @@
                                     <i class="green check icon"></i>
                                 </div>
                                 <div class="ui icon label">
-                                    <a href="https://github.com/charlesl46/music-metadata-python"><i class="github icon"></i></a>
+                                    <a href="https://github.com/charlesl46/music-metadata-python"><i
+                                            class="github icon"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div style="font-size: medium;" class="description">
-                        This project is designed for efficient retrieval and updating of metadata for MP3 audio files. The primary functionalities include processing a single audio file or an entire directory of files. The project utilizes the Deezer API to fetch detailed information such as artist, album, title, track number, and release date.                    </div>
+                        This project is designed for efficient retrieval and updating of metadata for MP3 audio files.
+                        The primary functionalities include processing a single audio file or an entire directory of
+                        files. The project utilizes the Deezer API to fetch detailed information such as artist, album,
+                        title, track number, and release date. </div>
                 </div>
                 <div class="extra content">
                     <div class="ui big labels">
@@ -541,8 +615,10 @@
                     <div class="header">Small web scraping projects</div>
                     <div style="font-size: medium;" class="description">
                         <ul>
-                            <li>Newspapers homepages (<a href="https://github.com/charlesl46/elpais">El Pais</a>,<a href="https://github.com/charlesl46/lemonde">Le Monde</a>)</li>
-                            <li><a href="https://github.com/charlesl46/allocine-stareval-python">Allociné</a>'s website</li>
+                            <li>Newspapers homepages (<a href="https://github.com/charlesl46/elpais">El Pais</a>,<a
+                                    href="https://github.com/charlesl46/lemonde">Le Monde</a>)</li>
+                            <li><a href="https://github.com/charlesl46/allocine-stareval-python">Allociné</a>'s website
+                            </li>
                             <li><a href="https://www.transfermarkt.fr/">Transfermarkt</a>'s website</li>
                             <li><a href="https://github.com/charlesl46/genius_scraping">Genius</a>'s website</li>
                             <li><a href="https://github.com/charlesl46/fake-name-generator">Fake Name Generator</a></li>
@@ -580,13 +656,13 @@
                 <i class="medal icon"></i>
             </div>
             <div class="content">
-              <div class="summary">
-                 <a href="https://le-shaker.com/coding-battle/">Shaker's coding challenge</a>
-                 <div style="font-size: medium;" class="ui label">
-                    <i class="calendar alternate outline icon"></i>October 2022 & October 2023
-                    <i class="location arrow icon"></i>Normandie
+                <div class="summary">
+                    <a href="https://le-shaker.com/coding-battle/">Shaker's coding challenge</a>
+                    <div style="font-size: medium;" class="ui label">
+                        <i class="calendar alternate outline icon"></i>October 2022 & October 2023
+                        <i class="location arrow icon"></i>Normandie
+                    </div>
                 </div>
-              </div>
             </div>
         </div>
         <div class="event">
@@ -594,13 +670,13 @@
                 <i class="calendar check outline icon"></i>
             </div>
             <div class="content">
-              <div class="summary">
-                 <em><a href="https://www.nuitdelinfo.com/">"Nuit de l'Info"</a></em> 2023 coding event
-                 <div style="font-size: medium;" class="ui label">
-                    <i class="calendar alternate outline icon"></i>December 2023
-                    <i class="location arrow icon"></i>Normandie
+                <div class="summary">
+                    <em><a href="https://www.nuitdelinfo.com/">"Nuit de l'Info"</a></em> 2023 coding event
+                    <div style="font-size: medium;" class="ui label">
+                        <i class="calendar alternate outline icon"></i>December 2023
+                        <i class="location arrow icon"></i>Normandie
+                    </div>
                 </div>
-              </div>
             </div>
         </div>
         <div class="event">
@@ -608,13 +684,13 @@
                 <i class="book open icon"></i>
             </div>
             <div class="content">
-              <div class="summary">
+                <div class="summary">
                     Inter - student tutoring management (maths and computing)
                     <div style="font-size: medium;" class="ui label">
                         <i class="calendar alternate outline icon"></i>December 2023
                         <i class="location arrow icon"></i>Normandie
                     </div>
-              </div>
+                </div>
             </div>
         </div>
     </div>
@@ -627,62 +703,73 @@
         <div class="ui huge list">
             <div class="item">
                 <i class="pen icon"></i>
-              <div class="content">
-                <a href="/logo_generator.html">Logo generator</a>
-              </div>
+                <div class="content">
+                    <a href="/logo_generator.html">Logo generator</a>
+                </div>
             </div>
             <div class="item">
                 <i class="markdown icon"></i>
-              <div class="content">
-                <a href="/markdown_preview.html">Markdown preview</a>
-              </div>
+                <div class="content">
+                    <a href="/markdown_preview.html">Markdown preview</a>
+                </div>
             </div>
         </div>
     </div>
     <div class="ui section divider"></div>
     <div class="ui center aligned secondary segment" style="padding:15px;">
         <h2 class="ui header">Lucas Charles <div style="font-size: small;" class="ui label">
-            <i class="copyright icon"></i> 2023
-        </div></h2>
-        <p>Made with <a href="https://fomantic-ui.com">Fomantic UI</a> and <a href="https://github.com/oxalorg/sakura">Sakura CSS</a></p>
+                <i class="copyright icon"></i> 2024
+            </div>
+        </h2>
+        <p>Made with <a href="https://fomantic-ui.com">Fomantic UI</a> and <a
+                href="https://github.com/oxalorg/sakura">Sakura CSS</a></p>
     </div>
     <br>
-    </body>
-    <script>
-        let icon_colors = {
-            gh_icon : "black",
-            lk_icon: "blue",
-            code_icon: "orange",
-            mail_icon : "red",
-            python_icon : "blue",
-            express_icon : "green",
-            html_icon : "orange",
-            latex_icon : "green",
-            scraping_icon : "red",
-            ml_icon : "blue",
-            java_icon : "blue",
-            docker_icon : "blue"
-        };
+</body>
+<script>
+    let icon_colors = {
+        gh_icon: "black",
+        lk_icon: "blue",
+        code_icon: "orange",
+        mail_icon: "red",
+        python_icon: "blue",
+        express_icon: "green",
+        html_icon: "orange",
+        latex_icon: "green",
+        scraping_icon: "red",
+        ml_icon: "blue",
+        java_icon: "blue",
+        docker_icon: "blue"
+    };
 
-        for (let key in icon_colors) {
-            console.log(key);
-            $(`#${key}`).hover(function(){
-                $(this).find(".icon").addClass(icon_colors[key]);
-            })
-            $(`#${key}`).mouseleave(function(){
-                $(this).find(".icon").removeClass(icon_colors[key]);
-            })
-        }
-    </script>
-    <style>
-        @font-face {
-            font-family: SMB;
-            src: url("fonts/JBM.ttf");
-        }
+    for (let key in icon_colors) {
+        console.log(key);
+        $(`#${key}`).hover(function () {
+            $(this).find(".icon").addClass(icon_colors[key]);
+        })
+        $(`#${key}`).mouseleave(function () {
+            $(this).find(".icon").removeClass(icon_colors[key]);
+        })
+    }
+</script>
+<style>
+    @font-face {
+        font-family: SMB;
+        src: url("fonts/JBM.ttf");
+    }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: SMB;
-        }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: SMB;
+    }
 
-    </style>
+    div.event .content{
+        transform: translateY(-5px);
+    }
+</style>
+
 </html>
