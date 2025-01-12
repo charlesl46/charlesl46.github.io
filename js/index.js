@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 })
 
 $(document).ready(function() {
+  const recentworks = $("#recentworks");
     var username = 'charlesl46';
     var apiUrl = 'https://api.github.com/users/' + username + '/events/public';
 
@@ -30,8 +31,8 @@ $(document).ready(function() {
                 var formattedDate = `${day}/${month}/${year.toString().slice(-2)}`;
 
                 console.log("dernière contrib : ",repoName,commitMessage);
-                $("#recentworks").removeClass("loading");
-                $("#recentworks").html(`
+                recentworks.removeClass("loading");
+                recentworks.html(`
                     <div style="font-size: large;" class="ui feed">
                         <div class="event">
                           <div class="label">
@@ -48,9 +49,13 @@ $(document).ready(function() {
                     `)
             } else {
                 console.log("aucune contrib récente")
+              recentworks.removeClass("loading");
+              recentworks.html("<p style='font-size:large;'>No recent works to be shown</p>")
             }
         },
         error: function(err) {
+          console.log("there was a successfull response");
+
             console.log(err);
         }
     });
