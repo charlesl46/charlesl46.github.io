@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+</head>
+
+<body>
+    <div class="ui stacked segment" style="margin: 10px;">
+        <h1 class="ui header">QR Code generator</h1>
+        <div class="field">
+            <label>Text to encode</label>
+            <div class="ui fluid icon input">
+                <input type="text" placeholder="Your text here">
+                <i class="qrcode icon"></i>
+            </div>
+        </div>
+        <div style="margin:20px; align-items: center;" id="qrcode"></div>
+    </div>
+    <script src="js/qrcode.min.js"></script>
+    <style>
+        #qrcode {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+    <script>
+        const qrcode = new QRCode(document.getElementById("qrcode"));
+
+        $("input").keyup(function () {
+            console.log("input");
+            var value = $(this).val();
+            qrcode.clear()
+            qrcode.makeCode(value);
+
+        });
+
+    </script>
+</body>
+
+</html
